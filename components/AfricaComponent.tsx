@@ -99,7 +99,7 @@ export const AfricaComponent = () => {
 
                         </div>
                         <div className='flex items-center justify-center w-full '>
-                            <button className=' ring-1 ring-[#ace0fb] px-5 py-2 text-[#ace0fb] rounded-lg'>Book a tour</button>
+                            <button className=' ring-1 ring-[#ff5722] px-5 py-2 text-[#ff5722] rounded-lg'>Book a tour</button>
                         </div>
 
                     </div>
