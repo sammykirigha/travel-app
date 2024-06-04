@@ -181,6 +181,41 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+                <div className="flex line">
+                  <p className=" text-white text-lg">Arrival in Cape Town Day Two</p>
+                  <div className="flex">
+                    <p className="text-white text-sm">
+                      Arrive in Cape Town, check-in to your accommodation, and the rest of your journey.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex line">
+                  <p className=" text-white text-lg">Arrival in Cape Town Day Three</p>
+                  <div className="flex">
+                    <p className="text-white text-sm">
+                      Arrive in Cape Town, check-in to your accommodation, and the rest of your journey.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex line">
+                  <p className=" text-white text-lg">Arrival in Cape Town Day Four</p>
+                  <div className="flex">
+                    <p className="text-white text-sm">
+                      Arrive in Cape Town, check-in to your accommodation, and the rest of your journey.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex line">
+                  <p className=" text-white text-lg">Arrival in Cape Town Day Five</p>
+                  <div className="flex">
+                    <p className="text-white text-sm">
+                      Arrive in Cape Town, check-in to your accommodation, and the rest of your journey.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className="flex line">
                 the line here
