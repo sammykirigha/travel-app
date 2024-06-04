@@ -167,13 +167,16 @@ export default function Home() {
           <div className={`text-[55px] ${arvo.className} font-[700] leading-normal text-white`}>Cape Town</div>
           <p className=" text-white text-lg">Discover the wonders of South Africa</p>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col mt-10">
             <div className="flex">
+
               <div className="flex line">
                 the line here
               </div>
+
               <div className="flex">
-                <div className="flex line">
+
+                <div className="flex flex-col line">
                   <p className=" text-white text-lg">Arrival in Cape Town Day one</p>
                   <div className="flex">
                     <p className="text-white text-sm">
@@ -181,7 +184,8 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="flex line">
+
+                {/* <div className="flex line">
                   <p className=" text-white text-lg">Arrival in Cape Town Day Two</p>
                   <div className="flex">
                     <p className="text-white text-sm">
@@ -189,7 +193,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex line">
                   <p className=" text-white text-lg">Arrival in Cape Town Day Three</p>
                   <div className="flex">
@@ -215,10 +219,13 @@ export default function Home() {
                       Arrive in Cape Town, check-in to your accommodation, and the rest of your journey.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
-              <div className="flex line">
-                the line here
+
+              <div className="flex flex-1 line px-28">
+                <div className='border-[2px] h-64 max-w-[300] border-[#ace0fb] rounded-2xl'>
+                  <Image src={image_six} className=' h-64 max-w-[300] object-cover rounded-2xl' alt='' />
+                </div>
               </div>
             </div>
           </div>
