@@ -278,6 +278,14 @@ export default function Home() {
           Review us
         </div>
       </div>
+
+      <div className="flex">
+        <div className="flex">
+          <form action="">
+            <input type="text" />
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
