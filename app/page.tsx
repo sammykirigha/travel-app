@@ -281,8 +281,13 @@ export default function Home() {
 
       <div className="flex">
         <div className="flex">
+          <h2 className=" text-white text-lg my-3">Contact us</h2>
           <form action="">
-            <input type="text" />
+            <input type="text" placeholder=" Enter Names" />
+            <input type="text" placeholder=" Enter Your Email" />
+            <textarea placeholder=" Message here"></textarea>
+
+            <input type="submit" />
           </form>
         </div>
       </div>
