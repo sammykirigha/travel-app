@@ -257,9 +257,9 @@ export default function Home() {
             </div>
 
             <div className='flex items-center justify-between w-full m-14 px-28 '>
-            <button className=' ring-1 ring-[#ff5722] px-5 py-2 text-[#ff5722] rounded-lg'> Book a Tour</button>
-            <p className=" text-white text-lg ">Booking Information</p>
-          </div>
+              <button className=' ring-1 ring-[#ff5722] px-5 py-2 text-[#ff5722] rounded-lg'> Book a Tour</button>
+              <p className=" text-white text-lg ">Booking Information</p>
+            </div>
           </div>
         </div>
       </div>
@@ -283,9 +283,18 @@ export default function Home() {
         <div className="flex">
           <h2 className=" text-white text-lg my-3">Contact us</h2>
           <form action="">
-            <input type="text" placeholder=" Enter Names" />
-            <input type="text" placeholder=" Enter Your Email" />
+            <div className="flex flex-col gap-3">
+              <label htmlFor="name"> Name</label>
+              <input type="text" placeholder=" Enter Names" />
+            </div>
+            <div className="flex flex-col gap-3">
+              <label htmlFor="name"> Email</label>
+              <input type="text" placeholder=" Enter Your Email" />
+            </div>
+            <div className="flex flex-col">
+            <label htmlFor="name"> Message</label>
             <textarea placeholder=" Message here"></textarea>
+            </div>
 
             <input type="submit" />
           </form>
