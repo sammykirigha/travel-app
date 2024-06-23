@@ -133,8 +133,19 @@ export default function Home() {
       </div>
 
       <div className=" flex flex-col">
-        <div className="text-lg text-white">Exclusive Tours</div>
-        <div>Every month NEW Tour</div>
+        <div className="flex flex-col w-full max-w-[1400px] mx-auto items-center justify-center  mt-5">
+          <div className={`text-[55px] ${arvo.className} font-[700] leading-normal text-white`}>Exclusive Tours</div>
+          <p className=" text-white text-lg">Every month NEW Tour</p>
+
+          <div className=" grid gap-5 mt-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
+            <section className="relative pt-20  pl-8">
+              <div className="absolute h-64 w-64 rotate-45 rounded-3xl bg-blue-500"></div>
+              <Image priority src={image_five} className='absolute object-cover rounded-3xl -rotate-[38deg] object-center h-64 w-64' alt='' />
+            </section>
+            <Image priority src={image_six} className='object-center h-40 w-40 object-cover -translate-y-3 translate-x-3  scale-100 rounded-2xl' alt='' />
+            <Image priority src={image_seven} className='object-center h-40 w-40 object-cover -translate-y-3 translate-x-3  scale-100 rounded-2xl' alt='' />
+          </div>
+        </div>
       </div>
     </div>
   );
