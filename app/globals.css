@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.text-stroke-3 {
+  text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+}
