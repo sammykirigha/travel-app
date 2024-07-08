@@ -77,7 +77,7 @@ export default function HomeCarousel() {
     return (
         <div className='carousel-container flex gap-5 flex-1 items-center justify-between content-between  '>
             <motion.div
-                className={`min-w-[400px] min-h-[230px] max-h-[230px] relative opacity-90 rounded-lg flex-col bg-purple-800 -mr-80`}
+                className={`min-w-[400px] min-h-[230px] max-h-[230px] relative opacity-90 rounded-lg flex-col bg-purple-800 -mr-[340px]`}
                 key={activeIndex}
                 variants={textContainerVariant}
                 initial='hidden'
@@ -106,7 +106,7 @@ export default function HomeCarousel() {
                         delay: 0,
                         ease: "easeInOut"
                     }}
-                    className=' firstContainer h-[300px] z-20  w-[200px]'>
+                    className=' firstContainer h-[300px] z-20  w-[230px]'>
                     <Image className=' object-cover w-full h-full first-image rounded-md border-[2px] ' src={image_five} alt='' />
                 </motion.div>
                 <motion.div
@@ -120,7 +120,7 @@ export default function HomeCarousel() {
                         delay: 0,
                         ease: "easeInOut"
                     }}
-                    className=' firstContainer h-[300px] z-10  w-[200px] '>
+                    className=' firstContainer h-[300px] z-10  w-[230px] '>
                     <Image className=' object-cover w-full h-full second-image rounded-md border-[2px] ' src={image_six} alt='' />
                 </motion.div>
                 <motion.div
@@ -134,7 +134,7 @@ export default function HomeCarousel() {
                         delay: 0,
                         ease: "easeInOut"
                     }}
-                    className=' firstContainer h-[300px] z-0  w-[200px]'>
+                    className=' firstContainer h-[300px] z-0  w-[230px]'>
                     <Image className=' third-image object-cover w-full h-full rounded-md border-[2px] ' src={image_seven} alt='' />
                 </motion.div>
 
