@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
 
 export default function Navbar() {
   return (
-    <div className='px-5 fixed w-full flex items-center justify-between bg-[#001928]/10 h-[70px]'>
+    <div className='px-5 fixed w-full flex items-center justify-between z-50 bg-[#001928]/10 bg-black h-[70px]'>
         <Logo />
         <ul className=' flex gap-7 items-center'>
             <li className=' text-[15px] leading-[17px] font-[400] text-white cursor-pointer'>About</li>

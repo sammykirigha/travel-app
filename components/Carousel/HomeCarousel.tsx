@@ -138,7 +138,7 @@ export default function HomeCarousel() {
                     <Image className=' third-image object-cover w-full h-full rounded-md border-[2px] ' src={image_seven} alt='' />
                 </motion.div>
 
-                <div className='controls left-32  flex gap-6 z-50 translate-y-[185px] relative '>
+                <div className='controls left-32  flex gap-6 z-30 translate-y-[185px] relative '>
                     <button
                         disabled={activeIndex === 0}
                         onClick={handlePreviousButton}
