@@ -1,4 +1,4 @@
-import { Inter, Roboto_Mono, Margarine, Domine } from 'next/font/google'
+import { Inter, Arvo, Margarine, Domine } from 'next/font/google'
  
 export const inter = Inter({
   subsets: ['latin'],
@@ -10,6 +10,11 @@ export const domine = Domine({
   display: 'swap',
 })
 export const margarine = Margarine({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '400'
+})
+export const arvo = Arvo({
   subsets: ['latin'],
   display: 'swap',
   weight: '400'

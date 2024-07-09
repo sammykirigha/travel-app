@@ -72,8 +72,6 @@ export default function HomeCarousel() {
             rating: 7.6
         },
     ]
-
-
     return (
         <div className='carousel-container flex gap-5 flex-1 items-center justify-between content-between  '>
             <motion.div
@@ -143,13 +141,13 @@ export default function HomeCarousel() {
                         disabled={activeIndex === 0}
                         onClick={handlePreviousButton}
                         className={`p-2 rounded-full border-[2px] border-[#ff5722] ${activeIndex === 0 ? " cursor-not-allowed" : " hover:ring-[3px] hover:ring-[#ff5722] transform ease-in-out duration-300 "}`}>
-                        <FaArrowLeft className={` ${activeIndex === 0 ? " text-gray-300" : "text-white"} text-lg `} />
+                        <FaArrowLeft className={` ${activeIndex === 0 ? " text-gray-300" : "text-[#ff5722]"} text-lg `} />
                     </button>
                     <button
                         onClick={handleNextButton}
                         disabled={activeIndex === 2}
                         className={`p-2 rounded-full border-[2px] border-[#ff5722] ${activeIndex === 2 ? ' cursor-not-allowed' : ' hover:ring-[3px] hover:ring-[#ff5722] transform ease-in-out duration-300 '} `}>
-                        <FaArrowRight className={` ${activeIndex === 2 ? " text-gray-300" : "text-white"} text-lg `} />
+                        <FaArrowRight className={` ${activeIndex === 2 ? " text-gray-300" : "text-[#ff5722]"} text-lg `} />
                     </button>
                 </div>
             </div>
