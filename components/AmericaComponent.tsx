@@ -52,7 +52,7 @@ export const AmericaComponent = () => {
                             </div>
                         </div>
                         <div className=' '>
-                            <h2 className={`my-4 ${arvo.className} text-white text-[25px] font-[700] text-center w-full`}>Our Facilities:</h2>
+                            <h2 className={`mt-4 ${arvo.className} text-white text-[25px] font-[700] text-center w-full`}>Our Facilities:</h2>
                             <ul className=' flex flex-col'>
                                 <li className=' flex gap-2 items-center justify-start '>
                                     <FaCheck className=' text-white text-md ' />
