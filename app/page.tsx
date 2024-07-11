@@ -17,6 +17,7 @@ import { useState } from "react";
 import { About } from "../components/About/About";
 import { AfricaComponent } from "../components/AfricaComponent";
 import { AmericaComponent } from "../components/AmericaComponent";
+import { AsiaComponent } from "../components/AsiaComponent";
 
 export default function Home() {
   const [selectedDestination, setSelectedDestination] = useState("africa")
@@ -24,24 +25,19 @@ export default function Home() {
   return (
     <div className="bg-[#01101a] h-screen max-w-[100vw] overflow-x-hidden">
       <Navbar />
-      <div className="bg-[url('../public/twenty-two.jpg')] opacity-90 relative  bg-cover bg-no-repeat">
-        <div className=" flex flex-col items-center justify-center pt-[80px]">
-          <div className=" w-fit flex mx-10 items-start justify-start h-auto">
-            <h1
-              style={{ margin: 'auto', }}
-              className={`text-stroke-3 ${domine.className} text-[100px] text-[#5a6e7c] pb-2 text-5xl font-bold text-start mb-12 mt-8`}>
-              journey to all world corners
+      <div className="bg-[url('../public/beach-eight.jpg')] h-screen opacity-90 relative  bg-cover bg-no-repeat">
+        <div className=" flex flex-col items-start justify-end w-3/6 h-full py-10 px-10">
+          <div className=" w-full flex items-start justify-start h-auto ">
+            <h1 className={`text-stroke-2 ${domine.className} text-white pb-2 text-5xl font-bold text-start `}>
+              Discover the beauty of the continent&apos;s world with us
             </h1>
           </div>
-          <div className="flex items-center max-w-full  ">
-            <div className="flex  flex-col mx-10  p-2 rounded-lg ">
+            <div className="flex w-2/3 flex-col rounded-lg ">
               <p className=" text-white text-[16px] leading-[20px] font-[400]">
                 Unlock the wonders of the world: Your dream trip.
                 Our tours offers a diverse range of destination that cater for a wide variety of interests </p>
               <button className=" px-8 py-4 font-bold bg-[#ff5722] text-white text-[20px] leading-4 outline outline-2 outline-[#ff5722] mt-10 mb-2 w-fit rounded-lg">Book a Tour</button>
             </div>
-            <HomeCarousel />
-          </div>
         </div>
       </div>
 
@@ -109,7 +105,7 @@ export default function Home() {
      <About />
 
       <div className=" w-full mt-14">
-        <h2 className={`my-4 ${arvo.className} text-white text-[40px] font-[700] text-center w-full`}>Destinations</h2>
+        <h2 className={`my-4 ${arvo.className} text-white text-[40px] font-[700] text-center w-full`}>Popular Destinations</h2>
         <div className="border-blue-500 bg-gradient-to-r from-[#01101a] via-[#ace0fb] to-[#01101a] w-full h-[2px]"></div>
         <div className=" flex gap-auto w-full items-center justify-evenly py-10 mt-2">
            <span onClick={() => setSelectedDestination("africa")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "africa" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Africa</span>
@@ -126,7 +122,7 @@ export default function Home() {
               ) : selectedDestination === "america" ? (
                 <AmericaComponent/>
               ) : selectedDestination === "asia" ? (
-                <div className=" text-white">Asia selected </div>
+                <AsiaComponent />
               ) : selectedDestination === "europe" ? (
                 <div className=" text-white">europr selected </div>
               ) : selectedDestination === "australia" ? (
