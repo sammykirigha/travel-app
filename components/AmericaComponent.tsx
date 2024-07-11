@@ -27,23 +27,25 @@ import { FaCheck } from 'react-icons/fa6'
 export const AmericaComponent = () => {
     return (
         <div className='flex w-full flex-col '>
-            <div className="bg-[url('../public/new-york-2.jpg')] h-[900px] flex flex-col w-full">
-                <div className=' w-full h-auto mt-32 flex flex-col items-center justify-start'>
-                    <h2 className={`my-4 ${arvo.className} text-white text-[40px] font-[700] text-center w-full`}>The New York City</h2>
-                    <p className=' text-white text-3xl'>Lets explore the beautiful city of New York</p>
-                </div>
-                <div className=' flex relative  top-0s h-3/5 gap-20 mx-auto w-2/3  items-center justify-center'>
-                    <div className=' absolute bottom-0 left-0  rounded-full border-[2px] border-white h-[400px] w-[400px]'>
-                        <Image src={new_york_hotel} alt='' className=' rounded-full h-full w-full' />
+            <div className="bg-[url('../public/cropped-new-york.jpg')] bg-no-repeat relative opacity-10 backdrop-opacity-10 backdrop-invert bg-white/30 h-[900px]">
+                <div className='flex gap-8 opacity-70 '>
+                    <div className=" flex flex-col w-full ">
+                        <div className=' w-full h-auto flex flex-col items-center justify-start'>
+                            <h2 className={`my-4 ${arvo.className} text-white text-[40px] font-[700] text-center w-full`}>The New York City</h2>
+                            <p className=' text-white text-3xl'>Lets explore the beautiful city of New York</p>
+                        </div>
+                        <div className=' grid grid-cols-3  gap-20 mx-auto w-2/3  items-center justify-center'>
+                            <div className=' border-[2px] border-white w-auto h-auto'>
+                                <Image src={new_york_hotel} alt='' className='  h-full w-full' />
+                            </div>
+                            <div className=' border-[2px] border-white w-auto h-auto'>
+                                <Image src={new_york_hotel_2} alt='' className='  h-full w-full' />
+                            </div>
+                            <div className=' border-[2px] border-white w-auto h-auto'>
+                                <Image src={new_york_swimming_2} alt='' className='  h-full w-full' />
+                            </div>
+                        </div>
                     </div>
-                    <div className=' absolute top-12 z-20 rounded-full border-[2px] border-white h-[300px] w-[300px]'>
-                        <Image src={new_york_hotel_2} alt='' className=' rounded-full h-full w-full' />
-                    </div>
-                    <div className=' absolute top-0 right-0  rounded-full border-[2px] border-white h-[400px] w-[400px]'>
-                        <Image src={new_york_swimming_2} alt='' className=' rounded-full h-full w-full' />
-                    </div>
-                </div>
-                <div className=' bg-gradient-to-t from-[#01101a] '>
                     <div className=' flex mx-auto w-2/3  items-center justify-evenly'>
                         <div className=' flex flex-col gap-12 mt-8 '>
                             <p className=' text-white text-[17px] w-[350px]'>Celebrate your special moments with our exclusive Hotels to create  magical memories!</p>
@@ -79,6 +81,7 @@ export const AmericaComponent = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
