@@ -16,6 +16,7 @@ import image_seven from "../public/beach-eight.jpg"
 import { useState } from "react";
 import { About } from "../components/About/About";
 import { AfricaComponent } from "../components/AfricaComponent";
+import { AmericaComponent } from "../components/AmericaComponent";
 
 export default function Home() {
   const [selectedDestination, setSelectedDestination] = useState("africa")
@@ -112,27 +113,24 @@ export default function Home() {
         <div className="border-blue-500 bg-gradient-to-r from-[#01101a] via-[#ace0fb] to-[#01101a] w-full h-[2px]"></div>
         <div className=" flex gap-auto w-full items-center justify-evenly py-10 mt-2">
            <span onClick={() => setSelectedDestination("africa")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "africa" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Africa</span>
-           <span onClick={() => setSelectedDestination("america")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "america" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>America</span>
+           <span onClick={() => setSelectedDestination("america")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "america" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>New York City</span>
            <span onClick={() => setSelectedDestination("asia")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "asia" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Asia</span>
            <span onClick={() => setSelectedDestination("europe")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "europe" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Europe</span>
            <span onClick={() => setSelectedDestination("australia")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "australia" ? "text-[#ff5722]" : "text-white"} text-[35px] leading-[23px]`}>Australia</span>
-           <span onClick={() => setSelectedDestination("new_zealand")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "new_zealand" ? "text-[#ff5722]" : "text-white"} text-[35px] leading-[23px]`}>New Zealand</span>
         </div>
         <div className="border-blue-500 bg-gradient-to-r from-[#01101a] via-[#ace0fb] to-[#01101a] w-full h-[2px]"></div>
-        <div className="my-10">
+        <div className="">
             {
               selectedDestination === "africa" ? (
                 <AfricaComponent />
               ) : selectedDestination === "america" ? (
-                <div className=" text-white">america selected </div>
+                <AmericaComponent/>
               ) : selectedDestination === "asia" ? (
                 <div className=" text-white">Asia selected </div>
               ) : selectedDestination === "europe" ? (
                 <div className=" text-white">europr selected </div>
               ) : selectedDestination === "australia" ? (
                 <div className=" text-white">australia selected </div>
-              ) : selectedDestination === "new_zealand" ? (
-                <div className=" text-white">New Zealand selected </div>
               ) : null
             }
         </div>
