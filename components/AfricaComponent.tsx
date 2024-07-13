@@ -29,7 +29,7 @@ export const AfricaComponent = () => {
                             <div className='w-[50%] '>
                                 <div className=' w-full flex flex-col items-end justify-center '>
                                     <div className=' border-[2px] h-40 w-40 border-[#ace0fb] mt-7 rounded-2xl rotate-45 mr-28'>
-                                        <Image priority src={image_b} className=' h-40 w-40 object-cover -translate-y-3 translate-x-3 scale-100 rounded-2xl' alt='' />
+                                        <Image priority src={image_b} className='object-center h-40 w-40 object-cover -translate-y-3 translate-x-3 scale-100 rounded-2xl' alt='' />
                                     </div>
                                     <div className='mt-16 '>
                                         <p className=' text-white text-[15px] w-[400px] '><span className=' text-[#ace0fb] text-[18px]'>Natural Beauty:</span>
@@ -40,7 +40,7 @@ export const AfricaComponent = () => {
                                 </div>
                                 <div className=' mt-10 w-full flex flex-col items-end justify-center'>
                                     <div className=' border-[2px] h-40 w-40 border-[#ace0fb] mt-7 rounded-2xl rotate-45 mr-28'>
-                                        <Image priority src={image_five} className=' h-40 w-40 object-cover -translate-y-3 translate-x-3  scale-100 rounded-2xl' alt='' />
+                                        <Image priority src={image_five} className='object-center h-40 w-40 object-cover -translate-y-3 translate-x-3  scale-100 rounded-2xl' alt='' />
                                     </div>
                                     <div className='mt-16 '>
                                         <p className=' text-white text-[15px] w-[400px] '><span className=' text-[#ace0fb] text-[18px]'>Natural Beauty:</span>
@@ -51,7 +51,7 @@ export const AfricaComponent = () => {
                                 </div>
                                 <div className=' mt-10 w-full flex flex-col items-end justify-center'>
                                     <div className=' border-[2px] h-40 w-40 border-[#ace0fb] mt-7 rounded-2xl rotate-45 mr-28'>
-                                        <Image priority src={image_c} className=' h-40 w-40 object-cover -translate-y-3 translate-x-3  scale-100 rounded-2xl' alt='' />
+                                        <Image priority src={image_c} className='object-center h-40 w-40 object-cover -translate-y-3 translate-x-3  scale-100 rounded-2xl' alt='' />
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ export const AfricaComponent = () => {
                                         </p>
                                     </div>
                                     <div className='mt-16 border-[2px] mr-24 h-40 w-40 border-[#ace0fb] rounded-2xl rotate-45'>
-                                        <Image src={image_six} className=' h-40 w-40 object-cover translate-y-3 -translate-x-3 scale-100 rounded-2xl' alt='' />
+                                        <Image src={image_six} className='object-center h-40 w-40 object-cover translate-y-3 -translate-x-3 scale-100 rounded-2xl' alt='' />
                                     </div>
                                 </div>
                                 <span className=' absolute top-24 -left-8 w-5 h-5 rounded-full bg-white text-[#ff5722] text-center'>1</span>
@@ -79,8 +79,9 @@ export const AfricaComponent = () => {
                                         </p>
                                     </div>
                                     <div className='mt-12 border-[2px] mr-24 h-40 w-40 border-[#ace0fb] rounded-2xl rotate-45'>
-                                        <Image src={image_seven} className=' h-40 w-40 object-cover translate-y-3 -translate-x-3 scale-100 rounded-2xl' alt='' />
+                                        <Image src={image_seven} className='object-center h-40 w-40 object-cover translate-y-3 -translate-x-3 scale-100 rounded-2xl' alt='' />
                                     </div>
+                                    
                                 </div>
                                 <span className=' absolute top-[268px] -left-8 w-5 h-5 rounded-full bg-white text-[#ff5722] text-center'>2</span>
                                 <div className=' w-full mt-16 flex flex-col items-center justify-center'>

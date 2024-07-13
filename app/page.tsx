@@ -32,12 +32,12 @@ export default function Home() {
               Discover the beauty of the continent&apos;s world with us
             </h1>
           </div>
-            <div className="flex w-2/3 flex-col rounded-lg ">
-              <p className=" text-white text-[16px] leading-[20px] font-[400]">
-                Unlock the wonders of the world: Your dream trip.
-                Our tours offers a diverse range of destination that cater for a wide variety of interests </p>
-              <button className=" px-8 py-4 font-bold bg-[#ff5722] text-white text-[20px] leading-4 outline outline-2 outline-[#ff5722] mt-10 mb-2 w-fit rounded-lg">Book a Tour</button>
-            </div>
+          <div className="flex w-2/3 flex-col rounded-lg ">
+            <p className=" text-white text-[16px] leading-[20px] font-[400]">
+              Unlock the wonders of the world: Your dream trip.
+              Our tours offers a diverse range of destination that cater for a wide variety of interests </p>
+            <button className=" px-8 py-4 font-bold bg-[#ff5722] text-white text-[20px] leading-4 outline outline-2 outline-[#ff5722] mt-10 mb-2 w-fit rounded-lg">Book a Tour</button>
+          </div>
         </div>
       </div>
 
@@ -102,34 +102,39 @@ export default function Home() {
         </div>
       </div>
 
-     <About />
+      <About />
 
       <div className=" w-full mt-14">
         <h2 className={`my-4 ${arvo.className} text-white text-[40px] font-[700] text-center w-full`}>Popular Destinations</h2>
         <div className="border-blue-500 bg-gradient-to-r from-[#01101a] via-[#ace0fb] to-[#01101a] w-full h-[2px]"></div>
         <div className=" flex gap-auto w-full items-center justify-evenly py-10 mt-2">
-           <span onClick={() => setSelectedDestination("africa")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "africa" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Africa</span>
-           <span onClick={() => setSelectedDestination("america")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "america" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>New York City</span>
-           <span onClick={() => setSelectedDestination("asia")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "asia" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Asia</span>
-           <span onClick={() => setSelectedDestination("europe")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "europe" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Europe</span>
-           <span onClick={() => setSelectedDestination("australia")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "australia" ? "text-[#ff5722]" : "text-white"} text-[35px] leading-[23px]`}>Australia</span>
+          <span onClick={() => setSelectedDestination("africa")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "africa" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Africa</span>
+          <span onClick={() => setSelectedDestination("america")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "america" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>New York City</span>
+          <span onClick={() => setSelectedDestination("asia")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "asia" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Asia</span>
+          <span onClick={() => setSelectedDestination("europe")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "europe" ? "text-[#ff5722]" : "text-white"} text-[35px]  leading-[23px]`}>Europe</span>
+          <span onClick={() => setSelectedDestination("australia")} className={`cursor-pointer ${margarine.className} ${selectedDestination === "australia" ? "text-[#ff5722]" : "text-white"} text-[35px] leading-[23px]`}>Australia</span>
         </div>
         <div className="border-blue-500 bg-gradient-to-r from-[#01101a] via-[#ace0fb] to-[#01101a] w-full h-[2px]"></div>
         <div className="">
-            {
-              selectedDestination === "africa" ? (
-                <AfricaComponent />
-              ) : selectedDestination === "america" ? (
-                <AmericaComponent/>
-              ) : selectedDestination === "asia" ? (
-                <AsiaComponent />
-              ) : selectedDestination === "europe" ? (
-                <div className=" text-white">europr selected </div>
-              ) : selectedDestination === "australia" ? (
-                <div className=" text-white">australia selected </div>
-              ) : null
-            }
+          {
+            selectedDestination === "africa" ? (
+              <AfricaComponent />
+            ) : selectedDestination === "america" ? (
+              <AmericaComponent />
+            ) : selectedDestination === "asia" ? (
+              <AsiaComponent />
+            ) : selectedDestination === "europe" ? (
+              <div className=" text-white">europr selected </div>
+            ) : selectedDestination === "australia" ? (
+              <div className=" text-white">australia selected </div>
+            ) : null
+          }
         </div>
+      </div>
+
+      <div className=" flex flex-col">
+        <div className="text-lg text-white">Exclusive Tours</div>
+        <div>Every month NEW Tour</div>
       </div>
     </div>
   );
