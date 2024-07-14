@@ -263,6 +263,21 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="flex flex-col">
+        <div className="flex flex-col">
+          <h2 className="h2 text-2xl">Reviews</h2>
+          <p>We take pride for providing exceptional travel experiences</p>
+        </div>
+
+        <div className="flex moving carousel">
+          images and reviews
+        </div>
+
+        <div className="flex flex-col">
+          Review us
+        </div>
+      </div>
     </div>
   );
 }
