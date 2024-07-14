@@ -21,6 +21,7 @@ import { AsiaComponent } from "../components/AsiaComponent";
 
 export default function Home() {
   const [selectedDestination, setSelectedDestination] = useState("africa")
+  const [selectedDay, setSelectedDay] = useState("day_one")
 
   return (
     <div className="bg-[#01101a] h-screen max-w-[100vw] overflow-x-hidden">
@@ -162,10 +163,31 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col">
-      <div className="flex flex-col w-full max-w-[1400px] mx-auto items-center justify-center  mt-5">
+        <div className="flex flex-col w-full max-w-[1400px] mx-auto items-center justify-center  mt-5">
           <div className={`text-[55px] ${arvo.className} font-[700] leading-normal text-white`}>Cape Town</div>
           <p className=" text-white text-lg">Discover the wonders of South Africa</p>
+
+          <div className="flex flex-col">
+            <div className="flex">
+              <div className="flex line">
+                the line here
+              </div>
+              <div className="flex">
+                <div className="flex line">
+                  <p className=" text-white text-lg">Arrival in Cape Town Day one</p>
+                  <div className="flex">
+                    <p className="text-white text-sm">
+                      Arrive in Cape Town, check-in to your accommodation, and the rest of your journey.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex line">
+                the line here
+              </div>
+            </div>
           </div>
+        </div>
       </div>
     </div>
   );
