@@ -137,13 +137,26 @@ export default function Home() {
           <div className={`text-[55px] ${arvo.className} font-[700] leading-normal text-white`}>Exclusive Tours</div>
           <p className=" text-white text-lg">Every month NEW Tour</p>
 
-          <div className=" grid gap-5 mt-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
-            <section className="relative pt-20  pl-8">
-              <div className="absolute h-64 w-64 rotate-45 rounded-3xl bg-blue-500"></div>
-              <Image priority src={image_five} className='absolute object-cover rounded-3xl -rotate-[38deg] object-center h-64 w-64' alt='' />
-            </section>
-            <Image priority src={image_six} className='object-center h-40 w-40 object-cover -translate-y-3 translate-x-3  scale-100 rounded-2xl' alt='' />
-            <Image priority src={image_seven} className='object-center h-40 w-40 object-cover -translate-y-3 translate-x-3  scale-100 rounded-2xl' alt='' />
+          <div className=" flex gap-5 mt-20 items-start justify-evenly w-full px-10">
+            <div className=' border-[2px] max-h-24 max-w-24 border-[#ace0fb] rounded-2xl rotate-45'>
+              <Image src={image_six} className=' h-24 w-24 object-cover rounded-2xl' alt='' />
+            </div>
+            <div className=' border-[2px] m-2  h-44 w-44 border-[#ace0fb] rounded-2xl rotate-45'>
+              <Image src={image_six} className=' h-44 w-44 object-cover rounded-2xl' alt='' />
+            </div>
+            <div className=' border-[2px] m-4 h-64 w-64 mx-4 border-[#ace0fb] rounded-2xl rotate-45'>
+              <Image src={image_six} className=' h-64 w-64 object-cover rounded-2xl' alt='' />
+            </div>
+            <div className=' border-[2px] m-2 h-44 w-44 border-[#ace0fb] rounded-2xl rotate-45'>
+              <Image src={image_six} className=' h-44 w-44 object-cover rounded-2xl' alt='' />
+            </div>
+            <div className=' border-[2px] h-24 w-24 border-[#ace0fb] rounded-2xl rotate-45'>
+              <Image src={image_six} className=' h-24 w-24 object-cover rounded-2xl' alt='' />
+            </div>
+          </div>
+
+          <div className='flex items-center justify-center w-full m-14 '>
+            <button className=' ring-1 ring-[#ff5722] px-5 py-2 text-[#ff5722] rounded-lg'>Enter Gallery</button>
           </div>
         </div>
       </div>
