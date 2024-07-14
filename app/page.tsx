@@ -167,24 +167,25 @@ export default function Home() {
           <div className={`text-[55px] ${arvo.className} font-[700] leading-normal text-white`}>Cape Town</div>
           <p className=" text-white text-lg">Discover the wonders of South Africa</p>
 
-          <div className="flex flex-col mt-10">
-            <div className="flex flex-col md:flex-row gap-12">
+          <div className="flex flex-col items-center">
+            <div className="flex flex-col mt-10">
+              <div className="flex flex-col md:flex-row gap-12">
 
-              <div className="flex line">
-                the line here
-              </div>
-
-              <div className="flex">
-                <div className="flex flex-col line">
-                  <p className=" text-white text-lg">Arrival in Cape Town Day one</p>
-                  <div className="flex">
-                    <p className="text-white text-sm">
-                      Arrive in Cape Town, check-in to your accommodation, and the rest of your journey.
-                    </p>
-                  </div>
+                <div className="flex line">
+                  the line here
                 </div>
 
-                {/* <div className="flex line">
+                <div className="flex">
+                  <div className="flex flex-col line">
+                    <p className=" text-white text-lg">Arrival in Cape Town Day one</p>
+                    <div className="flex">
+                      <p className="text-white text-sm">
+                        Arrive in Cape Town, check-in to your accommodation, and the rest of your journey.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* <div className="flex line">
                   <p className=" text-white text-lg">Arrival in Cape Town Day Two</p>
                   <div className="flex">
                     <p className="text-white text-sm">
@@ -219,40 +220,45 @@ export default function Home() {
                     </p>
                   </div>
                 </div> */}
-              </div>
+                </div>
 
-              <div className="flex flex-1 line px-28">
-                <div className='border-[2px] h-64 max-w-[300] border-[#ace0fb] rounded-2xl'>
-                  <Image src={image_six} className=' h-64 max-w-[300] object-cover rounded-2xl' alt='' />
+                <div className="flex flex-1 line px-28">
+                  <div className='border-[2px] h-64 max-w-[300] border-[#ace0fb] rounded-2xl'>
+                    <Image src={image_six} className=' h-64 max-w-[300] object-cover rounded-2xl' alt='' />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="flex gap-5 items-center">
-            <div className="flex flex-col">
-              <h2 className="text-lg">Inclusions</h2>
-              <ul className="flex flex-col">
-                <li className="text-white text-sm">4 nights accommodation in a luxury hotel</li>
-                <li className="text-white text-sm">Guided tours and activities</li>
-                <li className="text-white text-sm">Transportation during the tour</li>
-                <li className="text-white text-sm">Daily breakfast</li>
-                <li className="text-white text-sm">Experienced tour guides</li>
-              </ul>
+            <div className="flex gap-10 items-start m-10">
+              <div className="flex flex-col">
+                <h2 className="text-lg text-white">Inclusions</h2>
+                <ul className="flex flex-col">
+                  <li className="text-white text-sm">4 nights accommodation in a luxury hotel</li>
+                  <li className="text-white text-sm">Guided tours and activities</li>
+                  <li className="text-white text-sm">Transportation during the tour</li>
+                  <li className="text-white text-sm">Daily breakfast</li>
+                  <li className="text-white text-sm">Experienced tour guides</li>
+                </ul>
+              </div>
+              <div className="flex flex-col">
+                <h2 className="text-lg text-white">Pricing</h2>
+                <p className=" text-white text-lg">$1,200 per person</p>
+                <span>excluding airfare</span>
+              </div>
+              <div className="flex flex-col">
+                <h2 className="text-lg text-white">Duration</h2>
+                <p className=" text-white text-lg">$1,200 per person</p>
+              </div>
+              <div className="flex flex-col">
+                <h2 className="text-lg text-white">Group size</h2>
+                <p className=" text-white text-lg">Maximum 12 travelers</p>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <h2 className="text-lg">Pricing</h2>
-              <p className=" text-white text-lg">$1,200 per person</p>
-              <span>excluding airfare</span>
-            </div>
-            <div className="flex flex-col">
-              <h2 className="text-lg">Duration</h2>
-              <p className=" text-white text-lg">$1,200 per person</p>
-            </div>
-            <div className="flex flex-col">
-              <h2 className="text-lg">Group size</h2>
-              <p className=" text-white text-lg">Maximum 12 travelers</p>
-            </div>
+
+            <div className='flex items-center justify-center w-full m-14 '>
+            <button className=' ring-1 ring-[#ff5722] px-5 py-2 text-[#ff5722] rounded-lg'> Book a Tour</button>
+          </div>
           </div>
         </div>
       </div>
