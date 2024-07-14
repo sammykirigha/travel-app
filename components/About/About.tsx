@@ -3,6 +3,7 @@ import React from 'react'
 import { BsShieldFillCheck } from 'react-icons/bs'
 import { FaClock, FaDollarSign } from 'react-icons/fa'
 import image_five from "../../public/beach-eight.jpg"
+import { arvo } from '@/@/app/fonts'
 
 export const About = () => {
   return (
@@ -11,12 +12,12 @@ export const About = () => {
       <Image src={image_five} alt="" className=" border-r-[5px] rounded-lg border-y-[5px] border-white  h-[400px]" />
     </div>
     <div className="flex flex-col flex-1 px-5">
-      <h2 className=" text-[65px] text-white">About Us</h2>
-      <p className=" text-white text-[15px]">Our team of travel experts is passionate about exploring the world and helping the clients to do the same. With years of experience in travel industry
+      <h2 className={`text-[65px] ${arvo.className} text-white `}>About Us</h2>
+      <p className=" text-white text-[16px]">Our team of travel experts is passionate about exploring the world and helping the clients to do the same. With years of experience in travel industry
         , we have developed strong relationships with suppliers and vendors around the world, allowing us to offer exclusive deals and insider access
         to some of the world&apos;s most incredible destinations.
       </p>
-      <p className=" text-white text-[18px]">At our travel agency, we believe that travel is more than just visiting new places -
+      <p className=" text-white text-[16px]">At our travel agency, we believe that travel is more than just visiting new places -
         its experiencing new cultures, meeting new people, and creating memories that last a lifetime.</p>
 
       <div className="flex gap-32 my-5">
