@@ -300,6 +300,13 @@ export default function Home() {
           </form>
         </div>
       </div>
+
+      <div className="flex flex-col">
+        <h2 className="text-lg">FAQs</h2>
+        <div className="flex flex-col">
+          All the FAQs here
+        </div>
+      </div>
     </div>
   );
 }
