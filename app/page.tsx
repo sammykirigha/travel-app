@@ -242,33 +242,16 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <h2 className="text-lg">Pricing</h2>
-              <ul className="flex flex-col">
-                <li className="text-white text-sm">4 nights accommodation in a luxury hotel</li>
-                <li className="text-white text-sm">Guided tours and activities</li>
-                <li className="text-white text-sm">Transportation during the tour</li>
-                <li className="text-white text-sm">Daily breakfast</li>
-                <li className="text-white text-sm">Experienced tour guides</li>
-              </ul>
+              <p className=" text-white text-lg">$1,200 per person</p>
+              <span>excluding airfare</span>
             </div>
             <div className="flex flex-col">
               <h2 className="text-lg">Duration</h2>
-              <ul className="flex flex-col">
-                <li className="text-white text-sm">4 nights accommodation in a luxury hotel</li>
-                <li className="text-white text-sm">Guided tours and activities</li>
-                <li className="text-white text-sm">Transportation during the tour</li>
-                <li className="text-white text-sm">Daily breakfast</li>
-                <li className="text-white text-sm">Experienced tour guides</li>
-              </ul>
+              <p className=" text-white text-lg">$1,200 per person</p>
             </div>
             <div className="flex flex-col">
               <h2 className="text-lg">Group size</h2>
-              <ul className="flex flex-col">
-                <li className="text-white text-sm">4 nights accommodation in a luxury hotel</li>
-                <li className="text-white text-sm">Guided tours and activities</li>
-                <li className="text-white text-sm">Transportation during the tour</li>
-                <li className="text-white text-sm">Daily breakfast</li>
-                <li className="text-white text-sm">Experienced tour guides</li>
-              </ul>
+              <p className=" text-white text-lg">Maximum 12 travelers</p>
             </div>
           </div>
         </div>
