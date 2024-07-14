@@ -160,6 +160,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="flex flex-col">
+      <div className="flex flex-col w-full max-w-[1400px] mx-auto items-center justify-center  mt-5">
+          <div className={`text-[55px] ${arvo.className} font-[700] leading-normal text-white`}>Cape Town</div>
+          <p className=" text-white text-lg">Discover the wonders of South Africa</p>
+          </div>
+      </div>
     </div>
   );
 }
