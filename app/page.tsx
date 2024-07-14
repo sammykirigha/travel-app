@@ -167,7 +167,7 @@ export default function Home() {
           <div className={`text-[55px] ${arvo.className} font-[700] leading-normal text-white`}>Cape Town</div>
           <p className=" text-white text-lg">Discover the wonders of South Africa</p>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center px-28">
             <div className="flex flex-col mt-10">
               <div className="flex flex-col md:flex-row gap-12">
 
@@ -222,8 +222,8 @@ export default function Home() {
                 </div> */}
                 </div>
 
-                <div className="flex flex-1 line px-28">
-                  <div className='border-[2px] h-64 max-w-[300] border-[#ace0fb] rounded-2xl'>
+                <div className="flex flex-1 line">
+                  <div className='border-[2px] h-64 max-w-full border-[#ace0fb] rounded-2xl'>
                     <Image src={image_six} className=' h-64 max-w-[300] object-cover rounded-2xl' alt='' />
                   </div>
                 </div>
@@ -256,8 +256,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='flex items-center justify-center w-full m-14 '>
+            <div className='flex items-center justify-between w-full m-14 px-28 '>
             <button className=' ring-1 ring-[#ff5722] px-5 py-2 text-[#ff5722] rounded-lg'> Book a Tour</button>
+            <p className=" text-white text-lg ">Booking Information</p>
           </div>
           </div>
         </div>
