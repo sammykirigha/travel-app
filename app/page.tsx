@@ -168,14 +168,13 @@ export default function Home() {
           <p className=" text-white text-lg">Discover the wonders of South Africa</p>
 
           <div className="flex flex-col mt-10">
-            <div className="flex">
+            <div className="flex flex-col md:flex-row gap-12">
 
               <div className="flex line">
                 the line here
               </div>
 
               <div className="flex">
-
                 <div className="flex flex-col line">
                   <p className=" text-white text-lg">Arrival in Cape Town Day one</p>
                   <div className="flex">
