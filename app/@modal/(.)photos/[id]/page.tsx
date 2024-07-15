@@ -14,10 +14,6 @@ function PhotoModal({ params: { id: photoId }}: {params: { id: string };}) {
 
     const picture = pictures.find(({ id }) => id === photoId);
 
-    console.log('====================================');
-    console.log("the images ");
-    console.log('====================================');
-
     if (!picture) return <Modal>No Image found</Modal>
 
     return (

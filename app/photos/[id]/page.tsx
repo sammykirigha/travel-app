@@ -18,6 +18,7 @@ function PhotoModal({ params: { id: photoId } }: { params: { id: string }; }) {
     if (!picture) return <Modal>No Image found</Modal>
 
     return (
+        <div className="flex bg-red-500 h-screen">
         <Modal>
             <CldImage
                 src={picture.publicId}
@@ -27,6 +28,7 @@ function PhotoModal({ params: { id: photoId } }: { params: { id: string }; }) {
                 alt={picture.alt}
             />
         </Modal>
+        </div>
     );
 }
 

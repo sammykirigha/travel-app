@@ -2,7 +2,7 @@ import React from 'react'
 
 const Default = () => {
   return (
-    <div>default</div>
+    <div className=' pt-[100px]'></div>
   )
 }
 

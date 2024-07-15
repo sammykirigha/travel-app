@@ -33,12 +33,60 @@ export default function Gallery() {
                 alt: "travel",
                 publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
                 title: "Travel to Africa"
-            }
+            },
+            {
+                id: "dssk3263ds68gdu",
+                alt: "travel",
+                publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
+                title: "Travel to Africa"
+            },
+            {
+                id: "dssk3263ds68gdu",
+                alt: "travel",
+                publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
+                title: "Travel to Africa"
+            },
+            {
+                id: "dssk3263ds68gdu",
+                alt: "travel",
+                publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
+                title: "Travel to Africa"
+            },
+            {
+                id: "dssk3263ds68gdu",
+                alt: "travel",
+                publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
+                title: "Travel to Africa"
+            },
+            {
+                id: "dssk3263ds68gdu",
+                alt: "travel",
+                publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
+                title: "Travel to Africa"
+            },
+            {
+                id: "dssk3263ds68gdu",
+                alt: "travel",
+                publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
+                title: "Travel to Africa"
+            },
+            {
+                id: "dssk3263ds68gdu",
+                alt: "travel",
+                publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
+                title: "Travel to Africa"
+            },
+            {
+                id: "dssk3263ds68gdu",
+                alt: "travel",
+                publicId: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRHjr1I8fFMaEF29fZmdser0dky4kwqU8xaO56oDPMo_2SSKSwDOVnjZI_3egZDdEUpz2JyYG8nnuKPF0LjZfrtmi64Xmr8tvBVZZHm4n6SSeivTx3ZhPA8-EQs3vvizg3FAqJ_Vaicwy_91k-Ni43fGrT_D16lTtgHAmmjRXrSx55yy8j4ioJ2euVJLY/s1600/banner2%20copy.png",
+                title: "Travel to Africa"
+            },
         ])
     },[])
 
     return (
-        <div className="max-w-8xl mx-auto h-screen bg-[#01101a] pt-[100px]">
+        <div className="max-w-8xl mx-auto h-auto bg-white pt-[70px]">
             <div className="flex items-center justify-center px-4">
                 {
                     pictures.length === 0 ? (

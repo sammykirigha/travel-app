@@ -3,6 +3,7 @@
 import { type ElementRef, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createPortal } from 'react-dom';
+import { FaTimes } from "react-icons/fa";
 
 function Modal({ children }: { children: React.ReactNode }) {
 
@@ -26,10 +27,12 @@ function Modal({ children }: { children: React.ReactNode }) {
 
   if (typeof window !== "undefined") {
     return createPortal(
-      <div className=" h-screen">
-        <dialog ref={dialogRef} className="modal" onClose={onDismiss}>
+      <div className=" pt-[70px]">
+        <dialog ref={dialogRef} className=" mt-[70px] fixed" onClose={onDismiss}>
           {children}
-          <button onClick={onDismiss} className="close-button" />
+          <button onClick={onDismiss} className=" absolute top-3 right-3">
+            <FaTimes className=' text-gray-700 text-2xl' />
+          </button>
         </dialog>
       </div>,
       window.document.getElementById('modal-root')!
