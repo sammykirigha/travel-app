@@ -2,8 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import { BsShieldFillCheck } from 'react-icons/bs'
 import { FaClock, FaDollarSign } from 'react-icons/fa'
-import image_five from "../../public/beach-eight.jpg"
-import { arvo } from '@/@/app/fonts'
+import image_five from "../public/beach-eight.jpg"
+import { arvo } from '@/@/components/ui/fonts'
 
 export const About = () => {
   return (

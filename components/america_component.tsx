@@ -5,7 +5,7 @@ import new_york_hotel from "../public/new-york-hotel-2.webp"
 import new_york_hotel_2 from "../public/new-york-hotel.jpg"
 import new_york_swimming from "../public/new-york.webp"
 import new_york_swimming_2 from "../public/new-york-swimming-2.jpg"
-import { arvo } from '../app/fonts'
+import { arvo } from './ui/fonts'
 import { FaCheck } from 'react-icons/fa6'
 
 

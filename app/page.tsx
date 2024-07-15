@@ -1,8 +1,6 @@
 "use client"
 import Image from "next/image";
-import HomeCarousel from "../components/Carousel/HomeCarousel";
-import Navbar from "../components/Navbar/Navbar";
-import { arvo, domine, margarine } from "./fonts";
+import { arvo, domine, margarine } from "../components/ui/fonts";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaRegSmile } from "react-icons/fa";
 import { GiWorld } from "react-icons/gi";
@@ -14,18 +12,20 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import image_six from "../public/beach-thirteen.jpg"
 import image_seven from "../public/beach-eight.jpg"
 import { useState } from "react";
-import { About } from "../components/About/About";
-import { AfricaComponent } from "../components/AfricaComponent";
-import { AmericaComponent } from "../components/AmericaComponent";
-import { AsiaComponent } from "../components/AsiaComponent";
+import { About } from "../components/about";
+import { AfricaComponent } from "../components/africa_component";
+import { AmericaComponent } from "../components/america_component";
+import { AsiaComponent } from "../components/asia_component";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [selectedDestination, setSelectedDestination] = useState("africa")
   const [selectedDay, setSelectedDay] = useState("day_one")
 
+  const router = useRouter()
+
   return (
     <div className="bg-[#01101a] h-screen max-w-[100vw] overflow-x-hidden">
-      <Navbar />
       <div className="bg-[url('../public/beach-eight.jpg')] h-screen opacity-90 relative  bg-cover bg-no-repeat">
         <div className=" flex flex-col items-start justify-end w-3/6 h-full py-10 px-10">
           <div className=" w-full flex items-start justify-start h-auto ">
@@ -157,7 +157,7 @@ export default function Home() {
           </div>
 
           <div className='flex items-center justify-center w-full m-14 '>
-            <button className=' ring-1 ring-[#ff5722] px-5 py-2 text-[#ff5722] rounded-lg'>Enter Gallery</button>
+            <button onClick={() => router.push("/gallery")}  className=' ring-1 ring-[#ff5722] px-5 py-2 text-[#ff5722] rounded-lg'>Enter Gallery</button >
           </div>
         </div>
       </div>
