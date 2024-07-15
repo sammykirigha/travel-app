@@ -1,81 +1,38 @@
-import { put } from '@vercel/blob';
-import { NextResponse } from 'next/server';
-import { getServerSession } from "next-auth/next"
+import { supabase } from "@/@/lib/supabase";
 
-import { authOptions } from "@/lib/auth"
-import { db } from '@/lib/db';
-import OpenAI from 'openai';
-import { getUserSubscriptionPlan } from '@/lib/subscription';
-import { RequiresHigherPlanError } from '@/lib/exceptions';
-import { CONFIG } from "@/config/env";
-import { fileTypes as codeTypes } from '@/lib/validations/codeInterpreter';
-import { fileTypes as searchTypes } from '@/lib/validations/fileSearch';
 
-export const maxDuration = 60;
-
-export async function POST(request: Request) {
+export async function POST(req: Request) {
     try {
-        const session = await getServerSession(authOptions)
+        const requestFormData = await req.formData();
+        const values = Object.entries(requestFormData);
+        const {name, ...GenreData} = createGalleryUploadsSchema.parse(values);
 
-        if (!session) {
-            return new Response("Unauthorized", { status: 403 })
-        }
-
-        // Validate user subscription plan
-        const { user } = session
-        const subscriptionPlan = await getUserSubscriptionPlan(user.id)
-        const count = await db.file.count({
+        let existingGenre = await supabase.gallery.findFirst({
             where: {
-                userId: user.id,
-            },
-        })
-        if (count >= subscriptionPlan.maxFiles) {
-            throw new RequiresHigherPlanError()
-        }
-
-        const { searchParams } = new URL(request.url);
-        const filename = searchParams.get('filename');
-
-        if (!filename) {
-            return new Response('Missing filename', { status: 400 });
-        }
-
-        const validExtensions = [...codeTypes, ...searchTypes];
-        if (!validExtensions.includes(filename.split('.').pop()!)) {
-            return new Response(`Invalid file extension, check the documentation for more information.`, { status: 400 });
-        }
-
-        if (!request.body) {
-            return new Response('Missing body', { status: 400 });
-        }
-
-        const blob = await put(filename, request.body, {
-            access: 'public',
+                name: name
+            }
         });
 
-        const openai = new OpenAI({
-            apiKey: CONFIG.OPENAI_KEY
-        })
-
-        const file = await openai.files.create(
-            { file: await fetch(blob.url), purpose: 'assistants' }
-        )
-
-        await db.file.create({
-            data: {
-                name: filename,
-                blobUrl: blob.url,
-                openAIFileId: file.id,
-                userId: session?.user?.id,
-            }
-        })
-
-        return NextResponse.json({ url: blob.url }, { status: 201 });
-    } catch (error) {
-        if (error instanceof RequiresHigherPlanError) {
-            return new Response("Requires Higher plan", { status: 402 })
+        if (existingGenre) {
+            return new Response("A Genre with that name already exists", { status: 400 })
         }
 
+        const GenreToCreate = {
+            ...GenreData,
+            name
+        }
+
+        const create_Genre = await prisma.genres.create({ data: GenreToCreate }).catch((error) => {
+            console.log("error", error);
+        })
+
+        return Response.json(JSON.parse(JSON.stringify(create_Genre, (key, value) =>
+            typeof value === 'bigint'
+                ? value.toString()
+                : value // return everything else unchanged
+        )));
+
+    } catch (error) {
         console.error(error);
         return new Response(null, { status: 500 })
     }
