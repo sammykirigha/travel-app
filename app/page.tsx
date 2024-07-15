@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image";
-import HomeCarousel from "../components/ui/home_carousel";
-import { arvo, domine, margarine } from "./fonts";
+import { arvo, domine, margarine } from "../components/ui/fonts";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaRegSmile } from "react-icons/fa";
 import { GiWorld } from "react-icons/gi";
@@ -17,7 +16,6 @@ import { About } from "../components/about";
 import { AfricaComponent } from "../components/africa_component";
 import { AmericaComponent } from "../components/america_component";
 import { AsiaComponent } from "../components/asia_component";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Home() {

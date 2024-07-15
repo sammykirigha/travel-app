@@ -1,8 +1,5 @@
-import PropertyManagerMobileSideBar from "@/app/[locale]/(dashboard)/dashboard/_components/mobile-property-manger-sidebar";
-import RequireAuth from "@/components/require-auth";
 import { getTranslations } from "next-intl/server";
-import DashboardHeader from "../../../components/layout/dashboard-header";
-import SideMenu from "./dashboard/_components/sidebar";
+import SideBar from "./dashboard/_components/sidebar";
 
 export async function generateMetadata() {
     const t = await getTranslations("Metadata");
@@ -19,20 +16,19 @@ export default async function RootLayout({
 }>) {
     return (
         // <RequireAuth roles={["property-manager"]}>
-            <div>
+        <div className=" ">
             {/* <DashboardHeader showDashLinks={false} /> */}
 
             {/* <div className="md:hidden">
                 <PropertyManagerMobileSideBar />
             </div> */}
 
-            <div className="flex justify-between px-4">
-                <div className="hidden md:block">
-                    <SideMenu />
+            <div className="flex justify-between px-4 pt-[70px]">
+                <div className="hidden md:block bg-red-500">
+                    <SideBar />
                 </div>
                 <div className="w-full h-full ml-2">{children}</div>
             </div>
-            </div>
-        {/* </RequireAuth> */}
+        </div>
     );
 }

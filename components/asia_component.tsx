@@ -20,7 +20,7 @@ import new_york_swimming from "../public/new-york-swimming.jpg"
 import new_york_swimming_2 from "../public/new-york-swimming-2.jpg"
 import { LiaFly } from "react-icons/lia";
 import { GiEarthAsiaOceania } from "react-icons/gi";
-import { arvo } from '../app/fonts'
+import { arvo } from './ui/fonts'
 import { FaCheck } from 'react-icons/fa6'
 
 
