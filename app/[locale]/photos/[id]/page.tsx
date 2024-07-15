@@ -1,5 +1,5 @@
 import CldImage from '@/@/components/gallery-image';
-import { Picture } from '@/@/app/gallery/page';
+import { Picture } from '@/@/app/[locale]/gallery/page';
 import Modal from '../../@modal/(.)photos/[id]/modal';
 
 function PhotoModal({ params: { id: photoId } }: { params: { id: string }; }) {

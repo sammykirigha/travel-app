@@ -1,21 +1,21 @@
 "use client"
 import Image from "next/image";
-import { arvo, domine, margarine } from "../components/ui/fonts";
+import { arvo, domine, margarine } from "../../components/ui/fonts";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaRegSmile } from "react-icons/fa";
 import { GiWorld } from "react-icons/gi";
 import { GiStarFormation } from "react-icons/gi";
 import { PiAngularLogo } from "react-icons/pi";
 import { FaChessQueen } from "react-icons/fa";
-import image_five from "../public/beach-eight.jpg"
+import image_five from "../../public/beach-eight.jpg"
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import image_six from "../public/beach-thirteen.jpg"
-import image_seven from "../public/beach-eight.jpg"
+import image_six from "../../public/beach-thirteen.jpg"
+import image_seven from "../../public/beach-eight.jpg"
 import { useState } from "react";
-import { About } from "../components/about";
-import { AfricaComponent } from "../components/africa_component";
-import { AmericaComponent } from "../components/america_component";
-import { AsiaComponent } from "../components/asia_component";
+import { About } from "../../components/about";
+import { AfricaComponent } from "../../components/africa_component";
+import { AmericaComponent } from "../../components/america_component";
+import { AsiaComponent } from "../../components/asia_component";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
   const router = useRouter()
 
   return (
-    <div className="bg-[#01101a] h-screen max-w-[100vw] overflow-x-hidden">
+    <div className="bg-[#01101a] h-screen max-w-[100vw] w-full overflow-x-hidden">
       <div className="bg-[url('../public/beach-eight.jpg')] h-screen opacity-90 relative  bg-cover bg-no-repeat">
         <div className=" flex flex-col items-start justify-end w-3/6 h-full py-10 px-10">
           <div className=" w-full flex items-start justify-start h-auto ">
