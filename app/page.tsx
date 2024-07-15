@@ -292,8 +292,8 @@ export default function Home() {
               <input type="text" placeholder=" Enter Your Email" />
             </div>
             <div className="flex flex-col">
-            <label htmlFor="name"> Message</label>
-            <textarea placeholder=" Message here"></textarea>
+              <label htmlFor="name"> Message</label>
+              <textarea placeholder=" Message here"></textarea>
             </div>
 
             <input type="submit" />
@@ -305,6 +305,13 @@ export default function Home() {
         <h2 className="text-lg">FAQs</h2>
         <div className="flex flex-col">
           All the FAQs here
+        </div>
+      </div>
+
+      <div className="flex">
+        <div className="flex flex-col">
+          <h2 className="text-lg">Fly Fly</h2>
+          <div className="p">Discover the world with Fly Fly</div>
         </div>
       </div>
     </div>
