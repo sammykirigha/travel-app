@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image";
-import HomeCarousel from "../components/Carousel/HomeCarousel";
-import Navbar from "../components/Navbar/Navbar";
+import HomeCarousel from "../components/ui/home_carousel";
 import { arvo, domine, margarine } from "./fonts";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaRegSmile } from "react-icons/fa";
@@ -14,10 +13,10 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import image_six from "../public/beach-thirteen.jpg"
 import image_seven from "../public/beach-eight.jpg"
 import { useState } from "react";
-import { About } from "../components/About/About";
-import { AfricaComponent } from "../components/AfricaComponent";
-import { AmericaComponent } from "../components/AmericaComponent";
-import { AsiaComponent } from "../components/AsiaComponent";
+import { About } from "../components/about";
+import { AfricaComponent } from "../components/africa_component";
+import { AmericaComponent } from "../components/america_component";
+import { AsiaComponent } from "../components/asia_component";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from '../Logo.tsx/Logo'
 import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
+import Logo from './ui/logo'
 
 export default function Navbar() {
   return (
