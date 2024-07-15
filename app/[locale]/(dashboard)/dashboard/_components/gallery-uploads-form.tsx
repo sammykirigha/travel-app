@@ -2,22 +2,44 @@
 
 import { Button } from '@/@/components/ui/button';
 import { Input } from '@/@/components/ui/input';
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm, SubmitHandler } from "react-hook-form";
+import toast from 'react-hot-toast';
 
 type Inputs = {
     title: string,
-    image: FormData,
+    image: FileList,
 };
 
 export const GalleryUploadsForm = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors, isLoading, isSubmitting }
+    } = useForm<Inputs>();
 
-        console.log("data", data) // watch input value by passing the name of it
-    };
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
 
+        let formData = new FormData();
+
+        formData.append("title", data.title);
+        formData.append("image", data.image[0]);
+
+        try {
+            let res = await fetch("/api/uploads", {
+                method: "POST",
+                body: formData,
+            });
+
+            if (res?.status === 201) {
+                toast.error("A File Document was created successfully");
+            }
+        } catch (error) {
+
+        }
+    }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -26,7 +48,9 @@ export const GalleryUploadsForm = () => {
                 <Input label='Upload Image' type='file' {...register("image", { required: true })} />
 
             </div>
-            <Button type="submit" className=' mt-5'>Submit</Button>
+            <Button type="submit" disabled={isSubmitting} className=' mt-5'>
+                {isSubmitting ? "Submitting..." : "Submit"}
+            </Button>
         </form>
     )
 
