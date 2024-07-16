@@ -22,7 +22,7 @@ const LoginForm = () => {
   const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
 
   return (
-    <div className=' w-full h-screen flex items-center justify-center bg-white  '>
+    <div className=' w-full h-screen flex items-center justify-center pt-10 bg-white  '>
       <Card className='w-full max-w-[500px]'>
         <CardContent>
           <div className="flex w-full flex-col items-center justify-center mx-auto rounded-lg   ">
@@ -53,7 +53,7 @@ const LoginForm = () => {
             </form>
 
             <div className="flex w-full items-center justify-center">
-              <p className=' text-sm flex gap-1'>Not registered yet? <Link href={"auth/signup"} className='text-[#ff5722] flex gap-1 cursor-pointer'>Create an account <FaArrowUpRightFromSquare /></Link> </p>
+              <p className=' text-sm flex gap-1'>Not registered yet? <Link href={"/auth/signup"} className='text-[#ff5722] flex gap-1 cursor-pointer'>Create an account <FaArrowUpRightFromSquare /></Link> </p>
             </div>
 
           </div>
