@@ -1,6 +1,9 @@
+"use client"
+
 import React from 'react'
 import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
 import Logo from './ui/logo'
+import Link from 'next/link'
 
 export default function Navbar() {
   return (
@@ -13,10 +16,16 @@ export default function Navbar() {
           <li className=' text-[15px] leading-[17px] font-[400] text-[#ace0fb] cursor-pointer'>Exclusive tour</li>
           <li className=' text-[15px] leading-[15px] font-[400] text-[#ace0fb] cursor-pointer'>Review</li>
         </ul>
+
         <div className="flex gap-5 items-center justify-between">
           <FaFacebook className=' text-white text-lg cursor-pointer' />
           <FaInstagram className=' text-white text-lg cursor-pointer' />
           <FaTiktok className=' text-white text-lg cursor-pointer' />
+        </div>
+
+        <div className="flex gap-5 items-center justify-between">
+          <Link href="auth/login" className=' text-[15px] leading-[15px] font-[400] text-[#ace0fb] cursor-pointer'>Login</Link>
+          <Link href="auth/signup" className=' text-[15px] leading-[15px] font-[400] text-[#ace0fb] cursor-pointer'>Sign Up</Link>
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ export default function Home() {
   const router = useRouter()
 
   return (
-    <div className="bg-[#01101a] h-screen max-w-[100vw] w-full overflow-x-hidden">
+    <div className="bg-[#01101a]">
       <div className="bg-[url('../public/beach-eight.jpg')] h-screen opacity-90 relative  bg-cover bg-no-repeat">
         <div className=" flex flex-col items-start justify-end w-3/6 h-full py-10 px-10">
           <div className=" w-full flex items-start justify-start h-auto ">
