@@ -7,9 +7,9 @@ export interface InputProps
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ({ className, type, label, ...props }, ref) => {
         return (
-            <div className=" flex items-start w-full flex-col justify-start gap-2">
+            <div className=" flex items-start w-full flex-col justify-start gap-2 my-2">
                 <label className={cn(
-                    " text-sm",
+                    " text-sm font-[500]",
                     className
                 )}>{label}</label>
                 <input
