@@ -53,7 +53,7 @@ const LoginForm = () => {
             </form>
 
             <div className="flex w-full items-center justify-center">
-              <p className=' text-sm flex gap-1'>Not registered yet? <Link href={"/auth/signup"} className='text-[#ff5722] flex gap-1 cursor-pointer'>Create an account <FaArrowUpRightFromSquare /></Link> </p>
+              <p className=' text-sm flex gap-1'>Not registered yet? <Link href={"/auth/sign-up"} className='text-[#ff5722] flex gap-1 cursor-pointer'>Create an account <FaArrowUpRightFromSquare /></Link> </p>
             </div>
 
           </div>

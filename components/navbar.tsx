@@ -25,7 +25,7 @@ export default function Navbar() {
 
         <div className="flex gap-5 items-center justify-between">
           <Link href="/auth/login" className=' text-[15px] leading-[15px] font-[400] text-[#ace0fb] cursor-pointer'>Login</Link>
-          <Link href="/auth/signup" className=' text-[15px] leading-[15px] font-[400] text-[#ace0fb] cursor-pointer'>Sign Up</Link>
+          <Link href="/auth/sign-up" className=' text-[15px] leading-[15px] font-[400] text-[#ace0fb] cursor-pointer'>Sign Up</Link>
         </div>
       </div>
     </div>

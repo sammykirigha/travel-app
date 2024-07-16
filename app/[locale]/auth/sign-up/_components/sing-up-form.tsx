@@ -9,6 +9,8 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 import Link from 'next/link';
 import { Card, CardContent } from '@/@/components/ui/card';
+import { registerWithEmailAndPasword } from '@/@/actions/supabase';
+import { json } from 'stream/consumers';
 
 type Inputs = {
     username: string,
@@ -19,7 +21,13 @@ type Inputs = {
 
 const SignUpForm = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+    const onSubmit: SubmitHandler<Inputs> = async (values) => {
+        const response = await registerWithEmailAndPasword({email: values.email})
+        const {data, error} = JSON.parse(response);
+        console.log('====================================');
+        console.log("response",data, error);
+        console.log('====================================')
+    };
 
     return (
         <div className=' w-full h-screen flex items-center justify-center pt-10 bg-white  '>
