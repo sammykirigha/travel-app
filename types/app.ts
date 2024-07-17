@@ -3,5 +3,5 @@ export interface User {
     full_name: string;
     avatar_url?: string;
     email: string;
-    job_title?: string;
+    role?: string;
   }
