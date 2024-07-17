@@ -1,10 +1,10 @@
 import React from 'react'
-import ManagementContainer from './_components/management-container';
+import DashboardManagementPage from './management/page';
 
  const DashboardPage = () => {
   return (
     <div>
-        <ManagementContainer />
+      <DashboardManagementPage />
     </div>
   )
 }

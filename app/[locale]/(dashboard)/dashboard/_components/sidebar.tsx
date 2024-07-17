@@ -20,8 +20,8 @@ const menuList = [
                 icon: Library,
             },
             {
-                link: "/dashboard/submissions",
-                text: "Submissions",
+                link: "/dashboard/bookings",
+                text: "Bookings",
                 icon: Archive,
             },
         ],
@@ -46,7 +46,7 @@ const menuList = [
 
 const SideBar = () => {
     return (
-        <div className="hidden md:block w-[300px] min-w[300px] border-gray-200 border-solid  border-r-2 min-h-screen p-4 bg-white">
+        <div className="hidden md:block w-[300px] min-w[300px] border-gray-200 border-solid  border-r-2 min-h-[calc(100vh-70px)] p-4 bg-white">
             <Command className="h-[300px] flex flex-col gap-2 bg-transparent">
                 <CommandList>
                     {menuList.map((menu, key) => (

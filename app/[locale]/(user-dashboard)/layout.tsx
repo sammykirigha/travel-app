@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import SideBar from "./dashboard/_components/sidebar";
+import SideBar from "../(dashboard)/dashboard/_components/sidebar";
 import RequireAuth from "@/@/components/require-auth";
 
 export async function generateMetadata() {
@@ -16,7 +16,7 @@ export default async function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <RequireAuth roles={["system-manager"]}>
+        <RequireAuth roles={["user"]}>
         <div className=" ">
             {/* <DashboardHeader showDashLinks={false} /> */}
 
