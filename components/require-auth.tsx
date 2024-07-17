@@ -1,6 +1,4 @@
 "use client";
-
-import { useSession } from "next-auth/react"
 import { ReactNode, useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa6";
 import { usePathname, useRouter } from "../navigation";
@@ -20,7 +18,6 @@ const RequireAuth = ({ children, roles = [], navigateTo }: RequireAuthProps) => 
         full_name: '',
         id: ''
     });
-    const {data} = useSession()
     const router = useRouter();
 
     const pathname = usePathname();
@@ -32,7 +29,6 @@ const RequireAuth = ({ children, roles = [], navigateTo }: RequireAuthProps) => 
           if(data?.session?.user){
             setUser(data?.session?.user as unknown as User)
           }
-
         };
     
         fetchData();
