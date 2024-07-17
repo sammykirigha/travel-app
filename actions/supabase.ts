@@ -11,17 +11,25 @@ export async function registerWithEmailAndPasword({ email, password}: Credential
 
   const supabase = await createClient();
 
-  // const response = await supabase.auth.signUp({
-  //   email,
-  //   password,
-  // })
-
-  const response = await supabase.auth.signInWithOtp({
-    email,
-    options: {
-      emailRedirectTo: 'http://localhost:3000/',
-    },
-  });
+  const response = await supabase.auth.signUp({password, email});
 
   return JSON.stringify(response)
+}
+
+export async function loginWithEmailAndPasword({ email, password}: Credentials) {
+
+  const supabase = await createClient();
+
+  const response = await supabase.auth.signInWithPassword({password, email});
+
+  return JSON.stringify(response)
+}
+
+export async function logOut({ email, password}: Credentials) {
+
+  const supabase = await createClient();
+
+  const {error} = await supabase.auth.signOut();
+
+  return JSON.stringify(error)
 }

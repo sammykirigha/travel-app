@@ -16,6 +16,8 @@ import { supabase_browser_client } from '@/@/lib/supabaseClient';
 import { z } from 'zod';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/@/components/ui/form';
 import { formSchema } from '@/@/lib/validations/formSchema';
+import { FaSpinner } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 type Inputs = {
     email: string,
@@ -23,6 +25,7 @@ type Inputs = {
 };
 
 const SignUpForm = () => {
+    const router = useRouter();
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -33,19 +36,19 @@ const SignUpForm = () => {
     });
 
     const onSubmit: SubmitHandler<Inputs> = async (values: z.infer<typeof formSchema>) => {
-        console.log('====================================');
-        console.log(values);
-        console.log('====================================');
         const response = await registerWithEmailAndPasword({ email: values.email, password: values.password })
         const { data, error } = JSON.parse(response);
+
+        if(!error){
+            router.push("/booking")
+          }
     };
 
     async function handleGoogleSignIn(provider: Provider) {
-        // https://supabase.com/docs/guides/auth/server-side/oauth-with-pkce-flow-for-ssr
-        await supabase_browser_client.auth.signInWithOAuth({
+        const res = await supabase_browser_client.auth.signInWithOAuth({
             provider,
             options: {
-                redirectTo: `${location.origin}/auth/callback`,
+                redirectTo: `${location.origin}/api/auth/callback`,
             },
         });
     }
@@ -96,7 +99,13 @@ const SignUpForm = () => {
                                             </FormItem>
                                         )}
                                     />
-                                    <Button type='submit' className='px-8  mt-5 py-1 my-1'>Submit</Button>
+                                    <Button type='submit' disabled={form.formState.isSubmitting} className='px-8  mt-5 py-1 my-1'>
+                                        {
+                                            form.formState.isSubmitting ? (
+                                                <FaSpinner size={16} className="animate-spin" />
+                                            ) : "Submit"
+                                        }
+                                    </Button>
                                 </div>
                             </form>
                         </Form>

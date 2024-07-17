@@ -14,6 +14,10 @@ import { formSchema } from '@/@/lib/validations/formSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { registerWithEmailAndPasword } from '@/@/actions/supabase';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/@/components/ui/form';
+import { supabase_browser_client } from '@/@/lib/supabaseClient';
+import { Provider } from '@supabase/supabase-js';
+import { FaSpinner } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 type Inputs = {
   email: string,
@@ -21,6 +25,9 @@ type Inputs = {
 };
 
 const LoginForm = () => {
+
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -30,9 +37,24 @@ const LoginForm = () => {
   });
 
   const onSubmit: SubmitHandler<Inputs> = async (values: z.infer<typeof formSchema>) => {
+
     const response = await registerWithEmailAndPasword({ email: values.email, password: values.password })
+
     const { data, error } = JSON.parse(response);
+
+    if(!error){
+      router.push("/booking")
+    }
   };
+
+  async function handleGoogleSignIn(provider: Provider) {
+    await supabase_browser_client.auth.signInWithOAuth({
+        provider,
+        options: {
+          redirectTo: `${location.origin}/api/auth/callback`,
+        },
+    });
+}
 
   return (
     <div className=' w-full h-screen flex items-center justify-center pt-10 bg-white  '>
@@ -44,7 +66,7 @@ const LoginForm = () => {
               <p className="text-md font-[500]">Hi, Welcome back 👋</p>
             </div>
             <div className="flex mt-2 w-full">
-              <Button className=' flex items-center justify-center gap-5 font-[500]' variant="outline">
+              <Button onClick={() => handleGoogleSignIn('google')} className=' flex items-center justify-center gap-5 font-[500]' variant="outline">
                 <FcGoogle />
                 Login with Google
               </Button>
@@ -81,7 +103,13 @@ const LoginForm = () => {
                       </FormItem>
                     )}
                   />
-                  <Button type='submit' className='px-8  mt-5 py-1 my-1'>Submit</Button>
+                  <Button type='submit' disabled={form.formState.isSubmitting} className='px-8  mt-5 py-1 my-1'>
+                    {
+                      form.formState.isSubmitting ? (
+                        <FaSpinner size={16} className="animate-spin" />
+                      ) : "Submit"
+                    }
+                  </Button>
                 </div>
               </form>
             </Form>
