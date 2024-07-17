@@ -1,15 +1,20 @@
 'use server';
 
-import { NextRequest, NextResponse } from "next/server";
-import { supabaseServerClient } from "../lib/supabaseServer";
+import createClient from "../lib/supabaseServer";
 
-export async function registerWithEmailAndPasword({
-  email,
-}: {
+export interface Credentials {
   email: string;
-}) {
+  password: string
+}
 
-  const supabase = await supabaseServerClient();
+export async function registerWithEmailAndPasword({ email, password}: Credentials) {
+
+  const supabase = await createClient();
+
+  // const response = await supabase.auth.signUp({
+  //   email,
+  //   password,
+  // })
 
   const response = await supabase.auth.signInWithOtp({
     email,
