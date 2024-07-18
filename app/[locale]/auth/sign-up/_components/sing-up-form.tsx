@@ -41,10 +41,6 @@ const SignUpForm = () => {
         const response = await registerWithEmailAndPasword({ email: values.email, password: values.password, full_name: values.full_name })
         const { data, error } = JSON.parse(response);
 
-        console.log('====================================');
-        console.log("the response data from form", data);
-        console.log('====================================');
-
         if (!error) {
             router.push("/booking")
         }
@@ -58,21 +54,24 @@ const SignUpForm = () => {
             },
         });
 
-        const { data: { user, session } } = res;
+        console.log('====================================');
+        console.log("res", res);
+        console.log('====================================');
+        // const { data: { user, session } } = res;
 
-        if (user !== null && session !== null) {
-            const { data, error } = await supabase.from("users").insert({
-                email: user?.email,
-                name: full_name,
-                role: USER_ROLES.USER,
-                created_at: new Date().toISOString(),
-                auth_id: user?.id
-            })
+        // if (user !== null && session !== null) {
+        //     const { data, error } = await supabase.from("users").insert({
+        //         email: user?.email,
+        //         name: full_name,
+        //         role: USER_ROLES.USER,
+        //         created_at: new Date().toISOString(),
+        //         auth_id: user?.id
+        //     })
 
-            if (error) {
-                throw new Error("An error occurred while creating a user")
-            }
-        }
+        //     if (error) {
+        //         throw new Error("An error occurred while creating a user")
+        //     }
+        // }
     }
 
     return (

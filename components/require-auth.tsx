@@ -13,11 +13,7 @@ interface RequireAuthProps {
 
 const RequireAuth = ({ children, roles = [], navigateTo }: RequireAuthProps) => {
     const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState<User>({
-        email: '',
-        full_name: '',
-        id: ''
-    });
+    const [user, setUser] = useState<User>();
     const router = useRouter();
 
     const pathname = usePathname();
