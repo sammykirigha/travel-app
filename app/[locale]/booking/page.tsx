@@ -1,14 +1,20 @@
+"use client"
 import { supabase_browser_client } from '@/@/lib/supabaseClient';
 import React from 'react'
 
-const BookingPage = async () => {
-    const { data: { session } } = await supabase_browser_client.auth.getSession()
+const BookingPage =  () => {
+    supabase_browser_client.auth.getSession().then((data) => {
+        console.log('====================================');
+        console.log("session",data?.data?.session);
+        console.log('====================================');
+    })
 
-    const user = session?.user;
+    // const user = session?.user;
 
-    if (!user) return;
+    // if (!user) return;
+
     return (
-        <div>BookingPage</div>
+        <div className=' bg-white h-screen'>BookingPage</div>
     )
 }
 
