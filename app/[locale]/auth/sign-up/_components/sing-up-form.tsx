@@ -21,6 +21,7 @@ import { useRouter } from 'next/navigation';
 
 type Inputs = {
     email: string,
+    full_name: string;
     password: string
 };
 
@@ -31,17 +32,18 @@ const SignUpForm = () => {
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: '',
-            password: ''
+            password: '',
+            full_name: ''
         },
     });
 
     const onSubmit: SubmitHandler<Inputs> = async (values: z.infer<typeof formSchema>) => {
-        const response = await registerWithEmailAndPasword({ email: values.email, password: values.password })
+        const response = await registerWithEmailAndPasword({ email: values.email, password: values.password, full_name: values.full_name })
         const { data, error } = JSON.parse(response);
 
-        if(!error){
+        if (!error) {
             router.push("/booking")
-          }
+        }
     };
 
     async function handleGoogleSignIn(provider: Provider) {
@@ -51,6 +53,25 @@ const SignUpForm = () => {
                 redirectTo: `${location.origin}/api/auth/callback`,
             },
         });
+
+        console.log('====================================');
+        console.log("res", res);
+        console.log('====================================');
+        // const { data: { user, session } } = res;
+
+        // if (user !== null && session !== null) {
+        //     const { data, error } = await supabase.from("users").insert({
+        //         email: user?.email,
+        //         name: full_name,
+        //         role: USER_ROLES.USER,
+        //         created_at: new Date().toISOString(),
+        //         auth_id: user?.id
+        //     })
+
+        //     if (error) {
+        //         throw new Error("An error occurred while creating a user")
+        //     }
+        // }
     }
 
     return (
@@ -72,6 +93,21 @@ const SignUpForm = () => {
                                 <div className=' w-full flex flex-col gap-5'>
                                     <FormField
                                         control={form.control}
+                                        name='full_name'
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>Full Name</FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder='Full Name' {...field} />
+                                                </FormControl>
+                                                {/* <FormDescription>Please enter your Full Name</FormDescription> */}
+                                                <FormMessage />
+                                            </FormItem>
+
+                                        )}
+                                    />
+                                    <FormField
+                                        control={form.control}
                                         name='email'
                                         render={({ field }) => (
                                             <FormItem>
@@ -79,7 +115,7 @@ const SignUpForm = () => {
                                                 <FormControl>
                                                     <Input placeholder='email' {...field} />
                                                 </FormControl>
-                                                <FormDescription>Please enter your email</FormDescription>
+                                                {/* <FormDescription>Please enter your email</FormDescription> */}
                                                 <FormMessage />
                                             </FormItem>
 
@@ -94,7 +130,7 @@ const SignUpForm = () => {
                                                 <FormControl>
                                                     <Input placeholder='password' {...field} type='password' />
                                                 </FormControl>
-                                                <FormDescription>Please enter your Password</FormDescription>
+                                                {/* <FormDescription>Please enter your Password</FormDescription> */}
                                                 <FormMessage />
                                             </FormItem>
                                         )}
